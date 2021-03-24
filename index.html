@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hang Man</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Hangman</h1>
+    <p>Find the hidden word! - Enter a letter</p>
+    <div class="game-container">
+        <svg class="figure-container" height='250' width="200">
+            <!-- Rod -->
+            <line x1="60" y1="20" x2="140" y2="20" />
+            <line x1="140" y1="20" x2="140" y2="50" />
+            <line x1="60" y1="20" x2="60" y2="230" />
+            <line x1="20" y1="230" x2="100" y2="230" />
+            <!-- Head -->
+            <circle cx="140" cy="70" r="20" class="figure-part" />
+            <!-- Body -->
+            <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+            <!-- Arms -->
+            <line x1="140" y1="105" x2="160" y2="120" class="figure-part" />
+            <line x1="140" y1="105" x2="120" y2="120" class="figure-part" />
+            <!-- Legs -->
+            <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+            <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+        </svg>
+        <div class="wrong-letters-container">
+            <div id="wrong-letters">
+
+            </div>
+        </div>
+        <div class="word" id="word"></div>
+    </div>
+    <!-- Final Msg Container -->
+    <div class="popup-container " id="popup-container">
+        <div class="popup">
+            <h2 id="final-msg"></h2>
+            <button id="play-button">Play again!</button>
+        </div>
+    </div>
+    <!-- Notification -->
+    <div class="notification-container " id="notification-container">
+        <p>you have already entered this letter </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

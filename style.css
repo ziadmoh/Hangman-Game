@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #34495e;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  overflow: hidden;
+  margin: 0;
+}
+h1 {
+  margin: 20px 0 0;
+}
+.figure-container {
+  fill: transparent;
+  stroke: white;
+  stroke-width: 4px;
+  stroke-linecap: round;
+}
+.figure-part {
+  display: none;
+}
+.game-container {
+  position: relative;
+  padding: 30px 30px;
+  margin: auto;
+  height: 350px;
+  width: 450px;
+}
+.wrong-letters-container {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+.wrong-letters-container p {
+  margin: 0 0 5px;
+}
+.wrong-letters-container span {
+  font-size: 24px;
+}
+.word {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+}
+.letter {
+  border-bottom: 3px solid steelblue;
+  font-size: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  height: 50px;
+  width: 20px;
+}
+.popup-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.popup {
+  background-color: #2980b6;
+  border-radius: 5px;
+  box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+  padding: 40px 100px;
+  text-align: center;
+}
+.popup button {
+  cursor: pointer;
+  background-color: white;
+  color: #2980b6;
+  border: 0;
+  font-size: 16px;
+  padding: 12px 20px;
+}
+.popup button:focus {
+  outline: 0;
+}
+.popup button:active {
+  transform: scale(0.98);
+}
+
+.notification-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  border-left: 5px solid yellow;
+  padding: 15px 20px;
+  position: absolute;
+  top: 100px;
+  z-index: 111111;
+  opacity: 0;
+  transition: transform 0.3s ease-in-out;
+}
+.notification-container.show {
+  opacity: 1;
+  transition: opacity 0.4s ease-out;
+}
+.notification-container p {
+  margin: 0;
+}
